@@ -9,5 +9,5 @@ export interface ProjectProps{
     websiteUrl?: string;
     technologies: ReactNode[];
     setDisplayedProject?: (project: ProjectPopupProps) => void;
-    popUp: ProjectPopupProps;
+    popUp?: ProjectPopupProps;
 }

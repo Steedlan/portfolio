@@ -93,11 +93,11 @@ export default function SectionProject({setDisplayedProject} : ProjectSectionPop
                     ]}
                     websiteUrl="https://phoenixresort.net"
                     setDisplayedProject={setDisplayedProject}
-                                        popUp={
+                    popUp={
                         {
                             title: "Phoenix Resort",
                             description: [
-                            "Born from a passion for theme parks and immersive experiences, Phoenix Resort is an ambitious Minecraft server project I began developing in 2023 to push the boundaries of what’s possible within the game. With a strong narrative foundation, it aims to deliver a deeply engaging experience that both impresses and inspires players.",
+                            "Born from a passion for theme parks, Phoenix Resort is an ambitious Minecraft server project I began developing in 2023 to push the boundaries of what’s possible within the game. With a strong narrative foundation, it aims to deliver a deeply engaging experience that both impresses and inspires players.",
                             "As the sole developer, I oversee every aspect of the project — from creative direction and design to full technical implementation, including custom plugins, database architecture, and infrastructure management. The project is treated as a complete software ecosystem, starting with a fully hand-crafted plugin that powers the park’s core systems.",
                             "Among its many innovative features, I developed a Next.js web application that dynamically streams themed music based on players’ in-game locations, reinforcing immersion. The app also enables real-time interactions with the game, such as a live map showing player positions.",
                             "Looking ahead, I plan to expand Phoenix Resort with even more ambitious features — including a dynamic shop system, realistic balloon physics, and interactive shows synchronized with in-game events.",
@@ -118,8 +118,9 @@ export default function SectionProject({setDisplayedProject} : ProjectSectionPop
                 />
                 <Project 
                     title="Portfolio"
-                    description="The portfolio you're browsing, showcasing my projects and skills."
+                    description="The portfolio you're browsing, showcasing my projects and skills. Developed with Next.js and TypeScript, featuring a custom design and responsive layout."
                     imageUrl="/images/portfolio.png"
+                    githubUrl="https://github.com/Steedlan/portfolio"
                     technologies={[
                         <TechBadge key={18} icon={<NextjsIcon height="1.3rem" width="1.3rem" />} techName="Next.js" />,
                         <TechBadge key={19} icon={<Typescript height="1.3rem" width="1.3rem" />} techName="TypeScript" />,
@@ -127,6 +128,25 @@ export default function SectionProject({setDisplayedProject} : ProjectSectionPop
                         <TechBadge key={21} icon={<Vscode height="1.3rem" width="1.3rem" />} techName="VScode" />
                     ]}
                     setDisplayedProject={setDisplayedProject}
+                    popUp={
+                        {
+                            title: "Phoenix Resort",
+                            description: [
+                            "Born from a passion for theme parks and immersive experiences, Phoenix Resort is an ambitious Minecraft server project I began developing in 2023 to push the boundaries of what’s possible within the game. With a strong narrative foundation, it aims to deliver a deeply engaging experience that both impresses and inspires players.",
+                            "As the sole developer, I oversee every aspect of the project — from creative direction and design to full technical implementation, including custom plugins, database architecture, and infrastructure management. The project is treated as a complete software ecosystem, starting with a fully hand-crafted plugin that powers the park’s core systems.",
+                            "Among its many innovative features, I developed a Next.js web application that dynamically streams themed music based on players’ in-game locations, reinforcing immersion. The app also enables real-time interactions with the game, such as a live map showing player positions.",
+                            "Looking ahead, I plan to expand Phoenix Resort with even more ambitious features — including a dynamic shop system, realistic balloon physics, and interactive shows synchronized with in-game events.",
+                            "Although still in active development, the project already demonstrates the potential of blending creativity, technical innovation, and storytelling — with a live preview available on YouTube."
+                            ],
+                            imageUrl: "/images/phoenix.png",
+                            technologies: [
+                        <TechBadge key={18} icon={<NextjsIcon height="1.3rem" width="1.3rem" />} techName="Next.js" />,
+                        <TechBadge key={19} icon={<Typescript height="1.3rem" width="1.3rem" />} techName="TypeScript" />,
+                        <TechBadge key={20} icon={<Nodejs height="1.3rem" width="1.3rem" />} techName="NodeJs" />,
+                        <TechBadge key={21} icon={<Vscode height="1.3rem" width="1.3rem" />} techName="VScode" />
+                            ]
+                        }
+                    }
                 />
             </HStack>
         </VStack>

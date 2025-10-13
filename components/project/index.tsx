@@ -27,18 +27,20 @@ export default function Project({description, imageUrl, technologies, title, git
                 >
                     {technologies.map((tech) => tech)}
                 </HStack>
-                <HStack 
-                    w="auto" 
-                    h="auto" 
-                    bg="#575757ff" 
-                    mt="0.5rem"
-                    onClick={() => setDisplayedProject && setDisplayedProject(popUp!)}
-                    cursor="pointer"
-                    _hover={{ bg: "#868686ff" }}
-                    borderRadius="1rem"
-                >
-                    <TextFont {...fonts.T1.T14px.Bold} p="0.5rem">See more</TextFont>
-                </HStack>
+                {popUp && (
+                    <HStack 
+                        w="auto" 
+                        h="auto" 
+                        bg="#575757ff" 
+                        mt="0.5rem"
+                        onClick={() => setDisplayedProject && setDisplayedProject(popUp!)}
+                        cursor="pointer"
+                        _hover={{ bg: "#868686ff" }}
+                        borderRadius="1rem"
+                    >
+                        <TextFont {...fonts.T1.T14px.Bold} p="0.5rem">See more</TextFont>
+                    </HStack>
+                )}
                 <HStack w="80%" h="0.1rem" bg="#8686862c" mt="0.2rem"/>
                 <HStack w="full" justifyContent={"center"} h="full" alignItems="end" mt="0.2rem">
                     {githubUrl &&                         

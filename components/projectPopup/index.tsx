@@ -8,7 +8,7 @@ export default function ProjectPopup({description, imageUrl, technologies, title
     return (
         <>
             <VStack h="100%" w="100%" bg="#0000009f" borderRadius="2rem" position="fixed" top="50%" left="50%" transform="translate(-50%, -50%)" zIndex="100" />
-            <VStack h="auto" p="1rem" w="80%" bg="#2b2b2bff" borderRadius="2rem" position="fixed" top="50%" left="50%" transform="translate(-50%, -50%)" zIndex="200">
+            <VStack h="auto" p="1rem" w="75%" bg="#2b2b2bff" borderRadius="2rem" position="fixed" top="50%" left="50%" transform="translate(-50%, -50%)" zIndex="200">
                 <HStack h="10%" w="full" borderTopRadius="2rem" justifyContent="center" alignItems="center">
                     <TextFont {...fonts.T1.T20px.Bold}>{title}</TextFont>
                     <Box position="absolute" right="2rem" cursor="pointer" onClick={() => setDisplayedProject && setDisplayedProject(null)}>

@@ -21,53 +21,60 @@ export default function Home() {
   return (    
     <Box>
       <Header/>
-      <Particles type={ParticlesType.CONNECT} zIndex={-20} id="home"/>
-      <HStack h="100vh" w="full" display="flex">
-      <VStack w="full"justifyContent="center" alignItems="center">
-        <HStack h="1rem" mt="3rem">
-          <Box h="full" w="1rem" position="relative" display="flex" alignItems="center" justifyContent="center">
-            <Box
-              h="60%"
-              w="60%"
-              bg="green"
-              borderRadius="20rem"
-              position="absolute"
-              top="50%"
-              left="50%"
-              transform="translate(-50%, -50%)"
-              zIndex={2}
-            />
-            <Box
-              h="full"
-              w="full"
-              bg="lime"
-              opacity={0.2}
-              borderRadius="20rem"
-              position="absolute"
-              top={0}
-              left={0}
-              zIndex={1}
-            />
-          </Box>
-          <TextFont {...fonts.T1.T12px.Bold} textShadow="0px 0px 2px lime">{t("openForWork")}</TextFont>
-        </HStack>
+      <Box id="home">
+        <Particles type={ParticlesType.CONNECT} zIndex={-20} id="homeParticles"/>
+        <HStack h="100vh" w="full" display="flex">
+        <VStack w="full"justifyContent="center" alignItems="center">
+          <HStack h="1rem" mt="3rem">
+            <Box h="full" w="1rem" position="relative" display="flex" alignItems="center" justifyContent="center">
+              <Box
+                h="60%"
+                w="60%"
+                bg="green"
+                borderRadius="20rem"
+                position="absolute"
+                top="50%"
+                left="50%"
+                transform="translate(-50%, -50%)"
+                zIndex={2}
+              />
+              <Box
+                h="full"
+                w="full"
+                bg="lime"
+                opacity={0.2}
+                borderRadius="20rem"
+                position="absolute"
+                top={0}
+                left={0}
+                zIndex={1}
+              />
+            </Box>
+            <TextFont {...fonts.T1.T12px.Bold} textShadow="0px 0px 2px lime">{t("openForWork")}</TextFont>
+          </HStack>
 
-        <VStack alignItems="center">
-          <TextFont {...fonts.T1.T48px.Bold} textShadow="1px 1px 10px gray" >{t("title")}</TextFont>
-          <TextFont {...fonts.T1.T20px.Regular} mt="-0.5rem" textShadow="1px 1px 4px gray">{t("subsubtitle")}</TextFont>
-          <TextFont {...fonts.T1.T14px.Regular} mt="-0.2rem" textShadow="1px 1px 4px gray">{t("subtitle")}</TextFont>
+          <VStack alignItems="center">
+            <TextFont {...fonts.T1.T48px.Bold} textShadow="1px 1px 10px gray" >{t("title")}</TextFont>
+            <TextFont {...fonts.T1.T20px.Regular} mt="-0.5rem" textShadow="1px 1px 4px gray">{t("subsubtitle")}</TextFont>
+            <TextFont {...fonts.T1.T14px.Regular} mt="-0.2rem" textShadow="1px 1px 4px gray">{t("subtitle")}</TextFont>
+          </VStack>
+
+          <HStack h="1rem" mb="3rem" w="full" justifyContent="center">
+            <TextFont {...fonts.T1.T24px.Bold} mt="38%">V</TextFont>
+          </HStack>
         </VStack>
-
-        <HStack h="1rem" mb="3rem" w="full" justifyContent="center">
-          <TextFont {...fonts.T1.T24px.Bold} mt="38%">V</TextFont>
         </HStack>
-      </VStack>
-      </HStack>
+      </Box>
 
-      <SectionAbout/>
+      <Box id="about"/>
+        <SectionAbout/>
+      <Box id="skills"/>
       <SectionSkills/>
+      <Box id="projects"/>
       <SectionProject setDisplayedProject={setDisplayedProject}/>
+      <Box id="studies"/>
       <SectionStudies/>
+      <Box id="contact"/>
       <SectionContact/>
 
       {displayedProject && <ProjectPopup {...displayedProject} setDisplayedProject={setDisplayedProject}/>}
