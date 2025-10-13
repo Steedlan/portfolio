@@ -1,4 +1,4 @@
-import { Box, HStack, Image, VStack } from "@chakra-ui/react";
+import { HStack, Image, VStack } from "@chakra-ui/react";
 import SectionTitle from "../../sectionTitle";
 import TextFont from "../../textFont";
 import fonts from "../../../utils/fonts";

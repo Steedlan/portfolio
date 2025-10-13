@@ -7,12 +7,8 @@ export interface Font {
 }
 
 export const customFonts = localFont({
-  src: [
-    {
-      path: "./fonts/Merriweather.ttf",
-      weight: "300",
-    },
-  ],
+  src: [{ path: './fonts/Merriweather.ttf', weight: '300', style: 'normal' }],
+  display: 'swap',
 });
 
 export interface Fonts {

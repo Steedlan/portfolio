@@ -1,6 +1,6 @@
 "use client";
 
-import { memo, useEffect, useCallback } from "react";
+import { memo, useEffect } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import type { Engine } from "@tsparticles/engine";
