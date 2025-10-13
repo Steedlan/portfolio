@@ -1,0 +1,15 @@
+{
+    "openForWork": "Ouvert au travail",
+    "title": "Arnaud Schellekens",
+    "subtitle": "Développeur Full-Stack Junior",
+    "subsubtitle": "Coder avec créativité, apprendre et progresser chaque jour",
+    "navbar.home": "Accueil",
+    "navbar.about": "À propos",
+    "navbar.skills": "Compétences",
+    "navbar.projects": "Projets",
+    "navbar.studies": "Études",
+    "navbar.contact": "Contact",
+    "about.title": "Bonjour",
+    "about.description": "Je suis un développeur web diplômé, passionné par la création d'expériences web, capable de contribuer à l'ensemble des stacks d'un projet.",
+    "about.description2": "Dans mon temps libre, j'aime développer des projets personnels interactifs conçus pour impressionner l'utilisateur."
+}
