@@ -1,15 +1,72 @@
 {
-    "openForWork": "Available for work",
+    "openForWork": "Open for Opportunities",
     "title": "Arnaud Schellekens",
     "subtitle": "Full-Stack Developer | Junior",
     "subsubtitle": "Creative coding with a drive to learn and improve.",
+
     "navbar.home": "Home",
     "navbar.about": "About",
     "navbar.skills": "Tech Stack",
     "navbar.projects": "Projects",
     "navbar.studies": "Studies",
     "navbar.contact": "Contact",
+
     "about.title": "Hello",
     "about.description": "I’m a graduate web developer, passionate about building web experiences, with the versatility to contribute across the full project stack.",
-    "about.description2": "In my free time, I enjoy developing personal projects into interactive experiences designed to leave a lasting impression."
+    "about.description2": "In my free time, I enjoy developing personal projects into interactive experiences designed to leave a lasting impression.",
+
+    "skills.description": "During my studies and personal projects, I have acquired a diverse set of technical skills that I continually strive to enhance. Here are all the technologies I already worked with:",
+    "skills.primary": "Primary Stack",
+    "skills.primary.description": "Technologies and skills I master and use confidently in professional and personal projects.",
+    "skills.secondary": "Proficient",
+    "skills.secondary.description": "Technologies and skills I’m comfortable using in a professional context.",
+    "skills.familiar": "Familiar",
+    "skills.familiar.description": "Technologies I have hands-on experience with.",
+
+
+    "projects.pro" : "Professional Experience",
+    "projects.eachstapp.title": "Eachstapp - Full-Stack Developer",
+    "projects.eachstapp.description": "Internship (Feb–May 2025): Developed, analyzed, and upgraded a web application for a casting agency to manage their projects, candidates, and clients.",
+    "projects.eachstapp.seeMore.line1": "As part of my studies, I completed a 16-week internship at Eachstapp, an SME specializing in software solutions development. Among their clients is a major casting agency in Belgium.",
+    "projects.eachstapp.seeMore.line2": "My main role was to develop and enhance a web application used by both the agency and its stakeholders (candidates, clients). I implemented various improvements and features, ranging from front-end redesigns to back-end functionality as well as technical analysis regarding the implementation of future features.",
+    "projects.eachstapp.seeMore.line3": "I worked closely with the development team, using agile methodologies to ensure efficient and high-quality delivery. This internship provided me with valuable experience in a professional environment, strengthened my technical skills, and helped me understand the real-world challenges of software development.",
+
+
+    "projects.perso" : "Personal Projects",
+    "projects.uno.title": "UnoVinci",
+    "projects.uno.description": "Multiplayer UNO-inspired card game supporting up to four players, AI opponents, multi-room lobbies, real-time chat, and sound effects. Developed as a school competition project and awarded first place by other students.",
+    "projects.uno.seeMore.line1": "Developed during a three-week school competition in a team of four, this project challenged us to create a website using technologies we had never tried before.",
+    "projects.uno.seeMore.line2": "What began as a simple card game concept quickly turned into an ambitious multiplayer UNO-inspired game, featuring multiple game rooms, AI-controlled players, real-time chat, and a strong visual identity.",
+    "projects.uno.seeMore.line3": "I contributed to both front-end and back-end development, using native JavaScript and WebSockets for live interactions, supported by a Socket.IO server managing game states and player progression.",
+    "projects.uno.seeMore.line4": "Due to the short timeframe, the focus was on rapid prototyping, learning, and pushing technical boundaries rather than long-term optimization — resulting in a fully functional proof of concept.",
+    "projects.uno.seeMore.line5": "The project was completed in just three intense weeks and was highly praised by peers for its ambition, visual quality, and the fact that it remained used by students during the rest of our studies",
+    "projects.uno.seeMore.line6": "Try it out yourself!",
+
+    "projects.phoenix.title": "Phoenix Resort",
+    "projects.phoenix.description": "A work-in-progress Minecraft theme-park server, treated as a full software product: custom Java plugins, a web app streaming location-aware audio, real-time game/web integration, and other visual experiences pushing the boundaries of what is possible in Minecraft.",
+    "projects.phoenix.seeMore.line1": "Born from a passion for theme parks, Phoenix Resort is an ambitious Minecraft server project I began developing in 2023 to push the boundaries of what’s possible within the game. With a strong narrative foundation, it aims to deliver a deeply engaging experience that both impresses and inspires players.",
+    "projects.phoenix.seeMore.line2": "As the sole developer, I oversee every aspect of the project — from creative direction and design to full technical implementation, including custom plugins, database architecture, and infrastructure management. The project is treated as a complete software ecosystem, starting with a custom plugin that powers the park’s core systems.",
+    "projects.phoenix.seeMore.line3": "Among its many features, I developed a Next.js web application that dynamically streams themed music based on players’ in-game locations, reinforcing immersion. The app also enables real-time interactions with the game, such as a live map showing player positions.",
+    "projects.phoenix.seeMore.line4": "Looking ahead, I plan to expand Phoenix Resort with even more ambitious features — including a dynamic shop system, realistic balloon physics, and interactive shows synchronized with in-game events as well as constructing the different park areas.",
+    "projects.phoenix.seeMore.line5": "Although still in active development, the project already demonstrates the potential of blending creativity, technical innovation, and storytelling — with a live preview available on YouTube.",
+
+    "projects.portfolio.title": "Portfolio",
+    "projects.portfolio.description": "The portfolio you're browsing, showcasing my projects and skills. Developed with Next.js and TypeScript, featuring a custom design and responsive layout.",
+
+    "projects.seeMore": "Discover more",
+    "projects.website": "Website",
+    "projects.github": "GitHub",
+
+    "studies.vinci.title": "Bachelor in Computer Science - Application Development Orientation",
+    "studies.vinci.school": "Léonard de Vinci University College, Brussels",
+    "studies.vinci.years": "2022 - June 2025",
+    "studies.vinci.note": "Great Distinction",
+    "studies.ace.title": "General Secondary Education",
+    "studies.ace.years": "2016 - 2022",
+    "studies.ace.school": "De l'Autre Côté de l'École, Brussels",
+    
+    "contact.title": "Get in Touch",
+    "contact.description": "I am available for professional opportunities. Please feel free to contact me to discuss collaborations, projects, or any other questions.",
+    "contact.inbox": "My inbox is always open.",
+    "contact.button": "Contact Me"
 }

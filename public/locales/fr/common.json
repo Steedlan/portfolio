@@ -1,15 +1,70 @@
 {
-    "openForWork": "Ouvert au travail",
+    "openForWork": "À l'écoute d'opportunités",
     "title": "Arnaud Schellekens",
     "subtitle": "Développeur Full-Stack Junior",
     "subsubtitle": "Coder avec créativité, apprendre et progresser chaque jour",
+
     "navbar.home": "Accueil",
     "navbar.about": "À propos",
     "navbar.skills": "Compétences",
     "navbar.projects": "Projets",
     "navbar.studies": "Études",
     "navbar.contact": "Contact",
+
     "about.title": "Bonjour",
     "about.description": "Je suis un développeur web diplômé, passionné par la création d'expériences web, capable de contribuer à l'ensemble des stacks d'un projet.",
-    "about.description2": "Dans mon temps libre, j'aime développer des projets personnels interactifs conçus pour impressionner l'utilisateur."
+    "about.description2": "Dans mon temps libre, j'aime développer des projets personnels interactifs conçus pour impressionner l'utilisateur.",
+
+    "skills.description": "Au cours de mes études et projets personnels, j'ai acquis un ensemble diversifié de compétences techniques que je m'efforce continuellement d'améliorer. Voici toutes les technologies avec lesquelles j'ai déjà travaillé :",
+    "skills.primary": "Stack Principale",
+    "skills.primary.description": "Technologies et compétences que j'utilise avec confiance dans des projets professionnels et personnels.",
+    "skills.secondary": "Compétent",
+    "skills.secondary.description": "Technologies et compétences que je maîtrise dans un contexte professionnel.",
+    "skills.familiar": "Familier",
+    "skills.familiar.description": "Technologies et compétences avec lesquelles j'ai eu une expérience pratique.",
+
+    "projects.pro" : "Expérience Professionnelle",
+    "projects.eachstapp.title": "Eachstapp - Développeur Full-Stack",
+    "projects.eachstapp.description": "Stage (Fév–Mai 2025) : Développement, analyse et amélioration d'une application web pour une agence de casting afin de gérer leurs projets, candidats et clients.",
+    "projects.eachstapp.seeMore.line1": "Dans le cadre de mes études, j'ai réalisé un stage de 16 semaines chez Eachstapp, une PME spécialisée dans le développement de solutions logicielles. Parmis leurs clients se trouve une agence de casting majeure en Belgique.",
+    "projects.eachstapp.seeMore.line2": "Mon rôle principal était de développer et d'améliorer une application web utilisée à la fois par l'agence et par ses parties prenantes (candidats, clients). J'ai réalisé différentes améliorations et fonctionnalités, allant de la refonte de parties front-end à l'implémentation de nouvelles fonctionnalités back-end ainsi que l'analyse technique concernant l'implémentation de futures fonctionnalités.",
+    "projects.eachstapp.seeMore.line3": "J'ai travaillé en étroite collaboration avec l'équipe de développement, en utilisant des méthodologies agiles pour assurer une livraison efficace et de haute qualité. Ce stage m'a permis d'acquérir une expérience précieuse dans un environnement professionnel, de renforcer mes compétences techniques et de comprendre les défis réels du développement logiciel.",
+
+    "projects.perso" : "Projets Personnels",
+    "projects.uno.title": "UnoVinci",
+    "projects.uno.description": "Jeu en ligne multijoueur inspiré d'UNO pouvant accueillir jusqu'à quatre joueurs, avec des adversaires IA, prise en charge de parties simultanées, un chat en temps réel et des effets sonores. Développé dans le cadre d'un projet scolaire et acclamé par les autres élèves.",
+    "projects.uno.seeMore.line1": "Développé lors d'une compétition scolaire de trois semaines en équipe de quatre, ce projet nous a mis au défi de créer un site web en utilisant des technologies que nous n'avions pas vu en cours.",
+    "projects.uno.seeMore.line2": "Ce qui a commencé comme un simple concept de jeu de cartes s'est rapidement transformé en un ambitieux jeu multijoueur inspiré d'UNO, avec plusieurs parties simultanées, des joueurs contrôlés par IA, un chat en temps réel et une forte identité visuelle.",
+    "projects.uno.seeMore.line3": "J'ai contribué au développement à la fois du front-end et du back-end, en utilisant du JavaScript natif et des WebSockets pour les interactions en direct, soutenu par un serveur Socket.IO gérant les états de jeu et la progression des joueurs.",
+    "projects.uno.seeMore.line4": "En raison du délai qui était court, l'accent a été mis sur le prototypage rapide, l'apprentissage et le dépassement des limites techniques plutôt que sur l'optimisation à long terme — aboutissant à une preuve de concept entièrement fonctionnelle.",
+    "projects.uno.seeMore.line5": "Le projet a été achevé en seulement trois semaines intenses et a été très apprécié par les pairs pour son ambition, sa qualité visuelle, et le fait qu'il ait continué à être utilisé par les étudiants pendant le reste de nos études",
+    "projects.uno.seeMore.line6": "Essayez-le vous-même !",
+
+    "projects.phoenix.title": "Phoenix Resort",
+    "projects.phoenix.description": "Un serveur Minecraft parc d'attractions en cours de développement, traité comme un logiciel complet : plugins Java personnalisés, application web diffusant de l'audio en fonction de la localisation, intégration entre le jeu et le web, et autres expériences visuelles repoussant les limites de ce qui est possible dans Minecraft.",
+    "projects.phoenix.seeMore.line1": "Né d'une passion pour les parcs d'attractions, Phoenix Resort est un projet ambitieux de serveur Minecraft que j'ai commencé à développer en 2023 pour repousser les limites de ce qui est possible dans le jeu. Avec une forte base narrative, il vise à offrir une expérience immersive qui impressionne et inspire les joueurs.",
+    "projects.phoenix.seeMore.line2": "Étant que seul développeur, je supervise chaque aspect du projet — de la direction créative et du design à la mise en œuvre technique complète, y compris la conception des fonctionnalités, l'architecture de la base de données et la gestion de l'infrastructure. Le projet est traité comme un écosystème complet, en commençant par un plugin personnalisé qui alimente les systèmes principaux du parc.",
+    "projects.phoenix.seeMore.line3": "Parmi ses nombreuses fonctionnalités, j'ai développé une application web Next.js qui diffuse dynamiquement de la musique thématique en fonction des emplacements des joueurs dans le jeu, renforçant ainsi l'immersion. L'application permet également des interactions temps réel avec le jeu, comme une carte affichant les positions des joueurs.",
+    "projects.phoenix.seeMore.line4": "À l'avenir, je prévois d'étendre le projet avec des fonctionnalités encore plus ambitieuses — y compris un système de boutique dynamique, une physique réaliste de ballons et des spectacles interactifs synchronisés avec les événements du jeu ainsi que la construction des différentes zones et attractions du parc.",
+    "projects.phoenix.seeMore.line5": "Bien qu'il soit encore en développement actif, le projet démontre déjà le potentiel de combiner créativité, innovation technique et narration pour proposer une expérience différente et unique. — avec un aperçu disponible sur YouTube.",
+
+    "projects.portfolio.title": "Portfolio",
+    "projects.portfolio.description": "Le portfolio que vous consultez, présentant mes projets et compétences. Développé avec Next.js et TypeScript, avec un design personnalisé et une mise en page responsive.",
+
+    "projects.seeMore": "Découvrir plus",
+    "projects.website": "Site Web",
+    "projects.github": "GitHub",
+
+    "studies.vinci.title": "Bachelier en informatique - Orientation Développement d'Applications",
+    "studies.vinci.school": "Haute École Léonard de Vinci, Bruxelles",
+    "studies.vinci.years": "2022 - Juin 2025",
+    "studies.vinci.note": "Grande Distinction",
+    "studies.ace.title": "Enseignement Secondaire Général",
+    "studies.ace.years": "2016 - 2022",
+    "studies.ace.school": "De l'Autre Côté de l'École, Bruxelles",
+
+    "contact.title": "Rencontrons nous !",
+    "contact.description": "Je suis disponible pour des opportunités professionnelles. N'hésitez pas à me contacter pour discuter de collaborations, projets ou toute autre question.",
+    "contact.inbox": "Ma boîte de réception est toujours ouverte.",
+    "contact.button": "Contactez-moi"
 }

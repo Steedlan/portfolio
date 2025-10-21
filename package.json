@@ -23,7 +23,8 @@
     "react-i18next": "^16.0.0",
     "react-icons": "^5.5.0",
     "tsparticles": "^3.9.1",
-    "tsparticles-engine": "^2.12.0"
+    "tsparticles-engine": "^2.12.0",
+    "vercel": "^48.2.9"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

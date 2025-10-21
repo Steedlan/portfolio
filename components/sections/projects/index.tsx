@@ -19,6 +19,7 @@ import fonts from "../../../utils/fonts";
 import Sqlite from "../../icons/sqlite";
 import Vscode from "../../icons/vscode";
 import ProjectSectionPopupProps from "./props";
+import Agile from "../../icons/agile";
 
 export default function SectionProject({setDisplayedProject} : ProjectSectionPopupProps) {
   const { t } = useTranslation();
@@ -26,10 +27,10 @@ export default function SectionProject({setDisplayedProject} : ProjectSectionPop
         <VStack pt="2rem" bg="#1b1b1b" w="full" h="auto" justifyContent="center" alignItems="center" position="relative" zIndex="5" dropShadow={"dark-lg"} shadow="inner">
             <SectionTitle title={t("navbar.projects")}/>
 
-            <TextFont {...fonts.T1.T32px.Bold}>Professional Experiences</TextFont>
+            <TextFont {...fonts.T1.T32px.Bold}>{t("projects.pro")}</TextFont>
             <Project 
-                    title="Eachstapp - Full-Stack Developer"
-                    description="Internship (Feb–May 2025): Developed, analyzed, and upgraded a web application for a casting agency to manage their projects, candidates, and clients."
+                    title={t("projects.eachstapp.title")}
+                    description={t("projects.eachstapp.description")}
                     imageUrl="/images/eachstapp.png"
                     technologies={[
                         <TechBadge key={10} icon={<NextjsIcon height="1.3rem" width="1.3rem" />} techName="Next.js" />,
@@ -37,17 +38,39 @@ export default function SectionProject({setDisplayedProject} : ProjectSectionPop
                         <TechBadge key={12} icon={<Nodejs height="1.3rem" width="1.3rem" />} techName="NodeJs" />,
                         <TechBadge key={13} icon={<Microsoftsqlserver height="1.3rem" width="1.3rem" />} techName="SQLServer" />,
                         <TechBadge key={14} icon={<Dotnet height="1.3rem" width="1.3rem" />} techName=".NET" />,
-                        <TechBadge key={15} icon={<Git height="1.3rem" width="1.3rem" />} techName="Git" />,
+                        <TechBadge key={15} icon={<Agile height="1.3rem" width="1.3rem" />} techName="Agile" />,
+                        <TechBadge key={24} icon={<Git height="1.3rem" width="1.3rem" />} techName="Git" />,
                         <TechBadge key={16} icon={<Vscode height="1.3rem" width="1.3rem" />} techName="VScode" />
                     ]}
+                    setDisplayedProject={setDisplayedProject}
+                    popUp={
+                        {
+                            title: t("projects.eachstapp.title"),
+                            description: [
+                            t("projects.eachstapp.seeMore.line1"),
+                            t("projects.eachstapp.seeMore.line2"),
+                            t("projects.eachstapp.seeMore.line3")
+                            ],
+                            imageUrl: "/images/eachstapp.png",
+                            technologies: [
+                        <TechBadge key={10} icon={<NextjsIcon height="1.3rem" width="1.3rem" />} techName="Next.js" />,
+                        <TechBadge key={11} icon={<Typescript height="1.3rem" width="1.3rem" />} techName="TypeScript" />,
+                        <TechBadge key={12} icon={<Nodejs height="1.3rem" width="1.3rem" />} techName="NodeJs" />,
+                        <TechBadge key={13} icon={<Microsoftsqlserver height="1.3rem" width="1.3rem" />} techName="SQLServer" />,
+                        <TechBadge key={14} icon={<Dotnet height="1.3rem" width="1.3rem" />} techName=".NET" />,
+                        <TechBadge key={23} icon={<Agile height="1.3rem" width="1.3rem" />} techName="Agile" />,
+                        <TechBadge key={15} icon={<Git height="1.3rem" width="1.3rem" />} techName="Git" />,
+                        <TechBadge key={16} icon={<Vscode height="1.3rem" width="1.3rem" />} techName="VScode" />
+                            ]
+                        }
+                    }
                     websiteUrl="https://www.eachstapp.com/"
                 />
-            <TextFont {...fonts.T1.T32px.Bold} mt="1rem">Personal Projects</TextFont>
+            <TextFont {...fonts.T1.T32px.Bold} mt="1rem">{t("projects.perso")}</TextFont>
             <HStack w="full" h="auto" justifyContent="center" alignItems="start">
                 <Project 
-                    title="UnoVinci"
-                    description="Multiplayer UNO-inspired card game supporting up to four players, AI opponents, multi-room lobbies, real-time chat, and sound effects. Developed as a school competition project and awarded first place by other students."
-                    imageUrl="/images/unovinci.png"
+                    title={t("projects.uno.title")}
+                    description={t("projects.uno.description")}                    imageUrl="/images/unovinci.png"
                     githubUrl="https://github.com/Steedlan/steedlan.github.io"
                     technologies={[
                         <TechBadge key={0} icon={<Javascript height="1.3rem" width="1.3rem" />} techName="JavaScript" />,
@@ -61,12 +84,12 @@ export default function SectionProject({setDisplayedProject} : ProjectSectionPop
                         {
                             title: "UnoVinci",
                             description: [
-                            "Developed during a three-week school competition in a team of four, this project challenged us to design and build an interactive website using technologies we had never explored before.",
-                            "What began as a simple card game concept quickly evolved into an ambitious multiplayer UNO-inspired experience, featuring multiple game rooms, AI-controlled players, real-time chat, and a strong visual identity.",
-                            "I contributed to both front-end and back-end development, using native JavaScript and WebSockets for live interactions, supported by a Socket.IO server managing game states and player progression.",
-                            "Due to the short timeframe, the focus was on rapid prototyping, learning, and pushing technical boundaries rather than long-term optimization — resulting in a fully functional and engaging proof of concept.",
-                            "The project was completed in just three intense weeks and was highly praised by peers for its ambition, visual quality, and the fact that it remained used by students during the rest of our studies",
-                            "UNOVinci is still available online and welcomes anyone who wants to jump in for a game!"
+                            t("projects.uno.seeMore.line1"),
+                            t("projects.uno.seeMore.line2"),
+                            t("projects.uno.seeMore.line3"),
+                            t("projects.uno.seeMore.line4"),
+                            t("projects.uno.seeMore.line5"),
+                            t("projects.uno.seeMore.line6")
                             ],
                             imageUrl: "/images/unovinci.png",
                             technologies: [
@@ -79,8 +102,8 @@ export default function SectionProject({setDisplayedProject} : ProjectSectionPop
                     }
                 />
                 <Project 
-                    title="Phoenix Resort"
-                    description="A work-in-progress Minecraft theme-park server, treated as a full software product: custom Java plugins, a web app streaming location-aware audio, real-time game/web integration, and other visual experiences pushing the boundaries of what is possible Minecraft."
+                    title={t("projects.phoenix.title")}
+                    description={t("projects.phoenix.description")}
                     imageUrl="/images/phoenix.png"
                     technologies={[
                         <TechBadge key={3} icon={<JavaIcon height="1.3rem" width="1.3rem" />} techName="Java" />,
@@ -97,11 +120,11 @@ export default function SectionProject({setDisplayedProject} : ProjectSectionPop
                         {
                             title: "Phoenix Resort",
                             description: [
-                            "Born from a passion for theme parks, Phoenix Resort is an ambitious Minecraft server project I began developing in 2023 to push the boundaries of what’s possible within the game. With a strong narrative foundation, it aims to deliver a deeply engaging experience that both impresses and inspires players.",
-                            "As the sole developer, I oversee every aspect of the project — from creative direction and design to full technical implementation, including custom plugins, database architecture, and infrastructure management. The project is treated as a complete software ecosystem, starting with a fully hand-crafted plugin that powers the park’s core systems.",
-                            "Among its many innovative features, I developed a Next.js web application that dynamically streams themed music based on players’ in-game locations, reinforcing immersion. The app also enables real-time interactions with the game, such as a live map showing player positions.",
-                            "Looking ahead, I plan to expand Phoenix Resort with even more ambitious features — including a dynamic shop system, realistic balloon physics, and interactive shows synchronized with in-game events.",
-                            "Although still in active development, the project already demonstrates the potential of blending creativity, technical innovation, and storytelling — with a live preview available on YouTube."
+                            t("projects.phoenix.seeMore.line1"),
+                            t("projects.phoenix.seeMore.line2"),
+                            t("projects.phoenix.seeMore.line3"),
+                            t("projects.phoenix.seeMore.line4"),
+                            t("projects.phoenix.seeMore.line5")
                             ],
                             imageUrl: "/images/phoenix.png",
                             technologies: [
@@ -117,8 +140,8 @@ export default function SectionProject({setDisplayedProject} : ProjectSectionPop
                     }
                 />
                 <Project 
-                    title="Portfolio"
-                    description="The portfolio you're browsing, showcasing my projects and skills. Developed with Next.js and TypeScript, featuring a custom design and responsive layout."
+                    title={t("projects.portfolio.title")}
+                    description={t("projects.portfolio.description")}
                     imageUrl="/images/portfolio.png"
                     githubUrl="https://github.com/Steedlan/portfolio"
                     technologies={[
@@ -128,25 +151,6 @@ export default function SectionProject({setDisplayedProject} : ProjectSectionPop
                         <TechBadge key={21} icon={<Vscode height="1.3rem" width="1.3rem" />} techName="VScode" />
                     ]}
                     setDisplayedProject={setDisplayedProject}
-                    popUp={
-                        {
-                            title: "Phoenix Resort",
-                            description: [
-                            "Born from a passion for theme parks and immersive experiences, Phoenix Resort is an ambitious Minecraft server project I began developing in 2023 to push the boundaries of what’s possible within the game. With a strong narrative foundation, it aims to deliver a deeply engaging experience that both impresses and inspires players.",
-                            "As the sole developer, I oversee every aspect of the project — from creative direction and design to full technical implementation, including custom plugins, database architecture, and infrastructure management. The project is treated as a complete software ecosystem, starting with a fully hand-crafted plugin that powers the park’s core systems.",
-                            "Among its many innovative features, I developed a Next.js web application that dynamically streams themed music based on players’ in-game locations, reinforcing immersion. The app also enables real-time interactions with the game, such as a live map showing player positions.",
-                            "Looking ahead, I plan to expand Phoenix Resort with even more ambitious features — including a dynamic shop system, realistic balloon physics, and interactive shows synchronized with in-game events.",
-                            "Although still in active development, the project already demonstrates the potential of blending creativity, technical innovation, and storytelling — with a live preview available on YouTube."
-                            ],
-                            imageUrl: "/images/phoenix.png",
-                            technologies: [
-                        <TechBadge key={18} icon={<NextjsIcon height="1.3rem" width="1.3rem" />} techName="Next.js" />,
-                        <TechBadge key={19} icon={<Typescript height="1.3rem" width="1.3rem" />} techName="TypeScript" />,
-                        <TechBadge key={20} icon={<Nodejs height="1.3rem" width="1.3rem" />} techName="NodeJs" />,
-                        <TechBadge key={21} icon={<Vscode height="1.3rem" width="1.3rem" />} techName="VScode" />
-                            ]
-                        }
-                    }
                 />
             </HStack>
         </VStack>

@@ -30,6 +30,8 @@ import fonts from "../../../utils/fonts";
 import SectionTitle from "../../sectionTitle";
 import { useTranslation } from "react-i18next";
 import Sqlite from "../../icons/sqlite";
+import Agile from "../../icons/agile";
+import Python from "../../icons/python";
 
 export default function SectionSkills() {
   const { t } = useTranslation();
@@ -50,12 +52,13 @@ export default function SectionSkills() {
       >
     <SectionTitle title={t("navbar.skills")}/>
     <TextFont {...fonts.T1.T16px.Regular} w="70%" mt="1rem" textAlign="center">
-      During my studies and personal projects, I have acquired a diverse set of technical skills that I continually strive to enhance. Here are all the technologies I already worked with:
+      {t("skills.description")}
     </TextFont>
     <HStack w="70%" h="auto" justifyContent="space-between" alignItems="center" flexWrap="wrap" gap="1rem" mt="3rem">
       <HStack w="full" justifyContent="center">
           <VStack w="49%" gap="0" h="full">
-            <TextFont {...fonts.T1.T16px.Regular} textAlign="center">Primary Stack</TextFont>
+            <TextFont {...fonts.T1.T16px.Regular} textAlign="center">{t("skills.primary")}</TextFont>
+            <TextFont {...fonts.T1.T12px.Regular} textAlign="center">{t("skills.primary.description")}</TextFont>
             <HStack w="full" justifyContent="center" alignItems="center" flexWrap="wrap" gap="1rem"  padding="1rem" borderRadius="1rem">
               <TechBadge icon={<JavaIcon height="1.3rem" width="1.3rem" />} techName="Java" />
               <TechBadge icon={<React height="1.3rem" width="1.3rem" />} techName="React" />
@@ -74,19 +77,22 @@ export default function SectionSkills() {
           </VStack>
         </HStack>
       <VStack w="49%" h="full" gap="0">
-        <TextFont {...fonts.T1.T16px.Regular} textAlign="center">Proficient</TextFont>
+        <TextFont {...fonts.T1.T16px.Regular} textAlign="center">{t("skills.secondary")}</TextFont>
+        <TextFont {...fonts.T1.T12px.Regular} textAlign="center">{t("skills.secondary.description")}</TextFont>
         <HStack w="full" h="full" justifyContent="center" alignItems="center" flexWrap="wrap" gap="1rem" padding="1rem" borderRadius="1rem">
           <TechBadge icon={<Microsoftsqlserver height="1.3rem" width="1.3rem" />} techName="SQLServer" />
           <TechBadge icon={<Websocket height="1.3rem" width="1.3rem" />} techName="WebSockets" />
           <TechBadge icon={<Docker height="1.3rem" width="1.3rem" />} techName="Docker" />
           <TechBadge icon={<Dotnet height="1.3rem" width="1.3rem" />} techName=".NET" />
+          <TechBadge key={15} icon={<Agile height="1.3rem" width="1.3rem" />} techName="Agile" />
           <TechBadge icon={<AdobePhotoshop height="1.3rem" width="1.3rem" />} techName="Photoshop" />
           <TechBadge icon={<Premiere height="1.3rem" width="1.3rem" />} techName="Premiere Pro" />
           <TechBadge icon={<Spring  height="1.3rem" width="1.3rem" />} techName="Spring" />
         </HStack>
       </VStack>
         <VStack w="49%" gap="0">
-          <TextFont {...fonts.T1.T16px.Regular} textAlign="center">Familiar</TextFont>
+          <TextFont {...fonts.T1.T16px.Regular} textAlign="center">{t("skills.familiar")}</TextFont>
+          <TextFont {...fonts.T1.T12px.Regular} textAlign="center">{t("skills.familiar.description")}</TextFont>
           <HStack w="full" justifyContent="center" alignItems="center" flexWrap="wrap" gap="1rem" padding="1rem" borderRadius="1rem">
             <TechBadge icon={<Sqlite height="1.3rem" width="1.3rem" />} techName="SQLite" />
             <TechBadge icon={<C height="1.3rem" width="1.3rem" />} techName="C" />
@@ -94,6 +100,7 @@ export default function SectionSkills() {
             <TechBadge icon={<Mongodb height="1.3rem" width="1.3rem" />} techName="MongoDB" />
             <TechBadge icon={<Angularjs height="1.3rem" width="1.3rem" />} techName="Angular" />
             <TechBadge icon={<Unity height="1.3rem" width="1.3rem" />} techName="Unity" />
+            <TechBadge icon={<Python height="1.3rem" width="1.3rem" />} techName="Python" />
           </HStack>
         </VStack>
       </HStack>

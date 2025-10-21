@@ -3,6 +3,7 @@ import SectionTitle from "../../sectionTitle";
 import { useTranslation } from "react-i18next";
 import TextFont from "../../textFont";
 import fonts from "../../../utils/fonts";
+import Link from "next/link";
 
 export default function SectionContact() {
     const {t} = useTranslation();
@@ -22,13 +23,15 @@ export default function SectionContact() {
                 shadow="inner"
               >
                 <SectionTitle title={t("navbar.contact")}/>
-                <TextFont {...fonts.T1.T20px.Regular}>Get in touch</TextFont>
+                <TextFont {...fonts.T1.T20px.Regular}>{t("contact.title")}</TextFont>
 
-                <TextFont {...fonts.T1.T14px.Regular}>I&apos;m available for full time opportunities.</TextFont>
-                <TextFont {...fonts.T1.T14px.Regular}>My inbox is always open</TextFont>
+                <TextFont {...fonts.T1.T14px.Regular}>{t("contact.description")}</TextFont>
+                <TextFont {...fonts.T1.T14px.Regular}>{t("contact.inbox")}</TextFont>
                 
                 <HStack w="auto" h="auto" p="1rem" bg="#3f3f3fff" borderRadius="1rem">
-                    <TextFont {...fonts.T1.T16px.Regular}>Let&apos;s chat</TextFont>
+                  <Link href="mailto:contact@arnaud-schellekens.be" target="_blank">
+                    <TextFont {...fonts.T1.T16px.Regular}>{t("contact.button")}</TextFont>
+                  </Link>
                 </HStack>
               </HStack>
     )
