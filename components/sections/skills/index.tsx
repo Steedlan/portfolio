@@ -33,7 +33,11 @@ import Sqlite from "../../icons/sqlite";
 import Agile from "../../icons/agile";
 import Python from "../../icons/python";
 
-export default function SectionSkills() {
+export interface SectionSkillsProps {
+  isPhoneDisplay: boolean;
+}
+
+export default function SectionSkills({ isPhoneDisplay }: SectionSkillsProps) {
   const { t } = useTranslation();
   return (
     <HStack 
@@ -50,57 +54,64 @@ export default function SectionSkills() {
         dropShadow={"dark-lg"}
         shadow="inner"
       >
-    <SectionTitle title={t("navbar.skills")}/>
-    <TextFont {...fonts.T1.T16px.Regular} w="70%" mt="1rem" textAlign="center">
-      {t("skills.description")}
-    </TextFont>
-    <HStack w="70%" h="auto" justifyContent="space-between" alignItems="center" flexWrap="wrap" gap="1rem" mt="3rem">
+    <SectionTitle title={t("navbar.skills")} isPhoneDisplay={isPhoneDisplay}/>
+    {isPhoneDisplay
+      ? <TextFont {...fonts.T1.T14px.Regular} w="70%" mt="1rem" textAlign="center">
+          {t("skills.description")}
+        </TextFont>
+      : <TextFont {...fonts.T1.T16px.Regular} w="70%" mt="1rem" textAlign="center">
+          {t("skills.description")}
+        </TextFont>
+    }
+    <HStack w="70%" h="auto" justifyContent="space-between" alignItems="center" flexWrap="wrap" gap="1rem" mt={isPhoneDisplay ? "1rem" : "3rem"}>
       <HStack w="full" justifyContent="center">
-          <VStack w="49%" gap="0" h="full">
-            <TextFont {...fonts.T1.T16px.Regular} textAlign="center">{t("skills.primary")}</TextFont>
-            <TextFont {...fonts.T1.T12px.Regular} textAlign="center">{t("skills.primary.description")}</TextFont>
-            <HStack w="full" justifyContent="center" alignItems="center" flexWrap="wrap" gap="1rem"  padding="1rem" borderRadius="1rem">
-              <TechBadge icon={<JavaIcon height="1.3rem" width="1.3rem" />} techName="Java" />
-              <TechBadge icon={<React height="1.3rem" width="1.3rem" />} techName="React" />
-              <TechBadge icon={<NextjsIcon height="1.3rem" width="1.3rem" />} techName="Next.js" />
-              <TechBadge icon={<Javascript height="1.3rem" width="1.3rem" />} techName="JavaScript" />
-              <TechBadge icon={<Typescript height="1.3rem" width="1.3rem" />} techName="TypeScript" />
-              <TechBadge icon={<Nodejs height="1.3rem" width="1.3rem" />} techName="NodeJs" />
-              <TechBadge icon={<Html5 height="1.3rem" width="1.3rem" />} techName="HTML" />
-              <TechBadge icon={<Css3 height="1.3rem" width="1.3rem" />} techName="CSS" />
-              <TechBadge icon={<Postgresql height="1.3rem" width="1.3rem" />} techName="PostGreSql" />
-              <TechBadge icon={<Git height="1.3rem" width="1.3rem" />} techName="Git" />
-              <TechBadge icon={<GithubSolid height="1.3rem" width="1.3rem" />} techName="Github" />
-              <TechBadge icon={<Vscode height="1.3rem" width="1.3rem" />} techName="VScode" />
-              <TechBadge icon={<Intellij height="1.3rem" width="1.3rem" />} techName="IntelliJ" />
+          <VStack w={isPhoneDisplay ? "full" : "49%"} gap="0" h="full">
+            <>
+              <TextFont {...fonts.T1.T20px.Regular} textAlign="center">{t("skills.primary")}</TextFont>
+              <TextFont {...(isPhoneDisplay ? fonts.T1.T12px.Regular : fonts.T1.T14px.Regular)} textAlign="center">{t("skills.primary.description")}</TextFont>
+            </>
+            <HStack w="full" justifyContent="center" alignItems="center" flexWrap="wrap" gap={isPhoneDisplay ? "0.6rem" : "1rem"}  padding="1rem" borderRadius="1rem">
+              <TechBadge icon={<JavaIcon height="1.3rem" width="1.3rem" />} techName="Java" isPhoneDisplay={true}/>
+              <TechBadge icon={<React height="1.3rem" width="1.3rem" />} techName="React" isPhoneDisplay={true}/>
+              <TechBadge icon={<NextjsIcon height="1.3rem" width="1.3rem" />} techName="Next.js" isPhoneDisplay={true}/>
+              <TechBadge icon={<Javascript height="1.3rem" width="1.3rem" />} techName="JavaScript" isPhoneDisplay={true}/>
+              <TechBadge icon={<Typescript height="1.3rem" width="1.3rem" />} techName="TypeScript" isPhoneDisplay={true}/>
+              <TechBadge icon={<Nodejs height="1.3rem" width="1.3rem" />} techName="NodeJs" isPhoneDisplay={true}/>
+              <TechBadge icon={<Html5 height="1.3rem" width="1.3rem" />} techName="HTML" isPhoneDisplay={true}/>
+              <TechBadge icon={<Css3 height="1.3rem" width="1.3rem" />} techName="CSS" isPhoneDisplay={true}/>
+              <TechBadge icon={<Postgresql height="1.3rem" width="1.3rem" />} techName="PostGreSql" isPhoneDisplay={true}/>
+              <TechBadge icon={<Git height="1.3rem" width="1.3rem" />} techName="Git" isPhoneDisplay={true}/>
+              <TechBadge icon={<GithubSolid height="1.3rem" width="1.3rem" />} techName="Github" isPhoneDisplay={true}/>
+              <TechBadge icon={<Vscode height="1.3rem" width="1.3rem" />} techName="VScode" isPhoneDisplay={true}/>
+              <TechBadge icon={<Intellij height="1.3rem" width="1.3rem" />} techName="IntelliJ" isPhoneDisplay={true}/>
             </HStack>
           </VStack>
         </HStack>
-      <VStack w="49%" h="full" gap="0">
-        <TextFont {...fonts.T1.T16px.Regular} textAlign="center">{t("skills.secondary")}</TextFont>
-        <TextFont {...fonts.T1.T12px.Regular} textAlign="center">{t("skills.secondary.description")}</TextFont>
-        <HStack w="full" h="full" justifyContent="center" alignItems="center" flexWrap="wrap" gap="1rem" padding="1rem" borderRadius="1rem">
-          <TechBadge icon={<Microsoftsqlserver height="1.3rem" width="1.3rem" />} techName="SQLServer" />
-          <TechBadge icon={<Websocket height="1.3rem" width="1.3rem" />} techName="WebSockets" />
-          <TechBadge icon={<Docker height="1.3rem" width="1.3rem" />} techName="Docker" />
-          <TechBadge icon={<Dotnet height="1.3rem" width="1.3rem" />} techName=".NET" />
-          <TechBadge key={15} icon={<Agile height="1.3rem" width="1.3rem" />} techName="Agile" />
-          <TechBadge icon={<AdobePhotoshop height="1.3rem" width="1.3rem" />} techName="Photoshop" />
-          <TechBadge icon={<Premiere height="1.3rem" width="1.3rem" />} techName="Premiere Pro" />
-          <TechBadge icon={<Spring  height="1.3rem" width="1.3rem" />} techName="Spring" />
+      <VStack w={isPhoneDisplay ? "full" : "49%"} h="full" gap="0">
+              <TextFont {...fonts.T1.T20px.Regular} textAlign="center">{t("skills.secondary")}</TextFont>
+              <TextFont {...(isPhoneDisplay ? fonts.T1.T12px.Regular : fonts.T1.T14px.Regular)} textAlign="center">{t("skills.secondary.description")}</TextFont>
+        <HStack w="full" h="full" justifyContent="center" alignItems="center" flexWrap="wrap" gap={isPhoneDisplay ? "0.6rem" : "1rem"} padding="1rem" borderRadius="1rem">
+          <TechBadge icon={<Microsoftsqlserver height="1.3rem" width="1.3rem" />} techName="SQLServer" isPhoneDisplay={true}/>
+          <TechBadge icon={<Websocket height="1.3rem" width="1.3rem" />} techName="WebSockets" isPhoneDisplay={true}/>
+          <TechBadge icon={<Docker height="1.3rem" width="1.3rem" />} techName="Docker" isPhoneDisplay={true}/>
+          <TechBadge icon={<Dotnet height="1.3rem" width="1.3rem" />} techName=".NET" isPhoneDisplay={true}/>
+          <TechBadge key={15} icon={<Agile height="1.3rem" width="1.3rem" />} techName="Agile" isPhoneDisplay={true}/>
+          <TechBadge icon={<AdobePhotoshop height="1.3rem" width="1.3rem" />} techName="Photoshop" isPhoneDisplay={true}/>
+          <TechBadge icon={<Premiere height="1.3rem" width="1.3rem" />} techName="Premiere Pro" isPhoneDisplay={true}/>
+          <TechBadge icon={<Spring  height="1.3rem" width="1.3rem" />} techName="Spring" isPhoneDisplay={true}/>
         </HStack>
       </VStack>
-        <VStack w="49%" gap="0">
-          <TextFont {...fonts.T1.T16px.Regular} textAlign="center">{t("skills.familiar")}</TextFont>
-          <TextFont {...fonts.T1.T12px.Regular} textAlign="center">{t("skills.familiar.description")}</TextFont>
-          <HStack w="full" justifyContent="center" alignItems="center" flexWrap="wrap" gap="1rem" padding="1rem" borderRadius="1rem">
-            <TechBadge icon={<Sqlite height="1.3rem" width="1.3rem" />} techName="SQLite" />
-            <TechBadge icon={<C height="1.3rem" width="1.3rem" />} techName="C" />
-            <TechBadge icon={<Flutter height="1.3rem" width="1.3rem" />} techName="Flutter" />
-            <TechBadge icon={<Mongodb height="1.3rem" width="1.3rem" />} techName="MongoDB" />
-            <TechBadge icon={<Angularjs height="1.3rem" width="1.3rem" />} techName="Angular" />
-            <TechBadge icon={<Unity height="1.3rem" width="1.3rem" />} techName="Unity" />
-            <TechBadge icon={<Python height="1.3rem" width="1.3rem" />} techName="Python" />
+        <VStack w={isPhoneDisplay ? "full" : "49%"} gap="0">
+            <TextFont {...fonts.T1.T20px.Regular} textAlign="center">{t("skills.familiar")}</TextFont>
+            <TextFont {...(isPhoneDisplay ? fonts.T1.T12px.Regular : fonts.T1.T14px.Regular)} textAlign="center">{t("skills.familiar.description")}</TextFont>
+          <HStack w="full" justifyContent="center" alignItems="center" flexWrap="wrap" gap={isPhoneDisplay ? "0.6rem" : "1rem"} padding="1rem" borderRadius="1rem">
+            <TechBadge icon={<Sqlite height="1.3rem" width="1.3rem" />} techName="SQLite" isPhoneDisplay={true}/>
+            <TechBadge icon={<C height="1.3rem" width="1.3rem" />} techName="C" isPhoneDisplay={true}/>
+            <TechBadge icon={<Flutter height="1.3rem" width="1.3rem" />} techName="Flutter" isPhoneDisplay={true}/>
+            <TechBadge icon={<Mongodb height="1.3rem" width="1.3rem" />} techName="MongoDB" isPhoneDisplay={true}/>
+            <TechBadge icon={<Angularjs height="1.3rem" width="1.3rem" />} techName="Angular" isPhoneDisplay={true}/>
+            <TechBadge icon={<Unity height="1.3rem" width="1.3rem" />} techName="Unity" isPhoneDisplay={true}/>
+            <TechBadge icon={<Python height="1.3rem" width="1.3rem" />} techName="Python" isPhoneDisplay={true}/>
           </HStack>
         </VStack>
       </HStack>

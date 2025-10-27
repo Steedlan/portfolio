@@ -4,7 +4,11 @@ import fonts from "../../utils/fonts"
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 
-const Header = () => {
+export interface HeaderProps {
+    isPhoneDisplay : boolean;
+}
+
+const Header = ({ isPhoneDisplay }: HeaderProps) => {
     const { t, i18n } = useTranslation();
     
     const toggleLang = () => {
@@ -14,6 +18,7 @@ const Header = () => {
 
     return(
         <>
+              {/* top gradient bar */}
               <HStack w="full" h="5rem" position="fixed" zIndex="100" top="0" bgImage="linear-gradient(180deg,
                     rgba(0, 0, 0, 1),
                     rgba(255, 255, 255, 0))"/>
@@ -25,7 +30,10 @@ const Header = () => {
                     <HStack position="fixed" zIndex="110" top="2rem" left="50%" bg="linear-gradient(180deg, #2b2b2b, #252525)" boxShadow="xl" w="auto" h="2rem" opacity="0.9" borderRadius={"2rem"}  transform="translateX(-50%)">
                       <Link href="/#home" prefetch={false} scroll={true}>
                         <HStack h="full" w="auto" position="relative" display="flex" alignItems="center" justifyContent="center">
-                            <TextFont m="1rem" {...fonts.T1.T16px.Bold} transition=".5s" _hover={{letterSpacing:"0.1rem"}} >{t("navbar.home")}</TextFont>
+                          {isPhoneDisplay 
+                            ? <TextFont m="1rem" {...fonts.T1.T12px.Bold} transition=".5s" _hover={{letterSpacing:"0.1rem"}} >{t("navbar.home")}</TextFont>
+                            : <TextFont m="1rem" {...fonts.T1.T16px.Bold} transition=".5s" _hover={{letterSpacing:"0.1rem"}} >{t("navbar.home")}</TextFont>
+                          }
                         </HStack>
                       </Link>
                          <Link href="/#about" prefetch={false} scroll={true}>

@@ -1,5 +1,5 @@
 "use client";
-import { Box, HStack, VStack } from "@chakra-ui/react";
+import { Box, HStack, useMediaQuery, VStack } from "@chakra-ui/react";
 import TextFont from "../components/textFont";
 import fonts from "../utils/fonts";
 import { useTranslation } from "react-i18next";
@@ -18,9 +18,10 @@ import ProjectPopupProps from "../components/projectPopup/props";
 export default function Home() {
   const { t } = useTranslation();
   const [displayedProject, setDisplayedProject] = useState<ProjectPopupProps | null>(null);
+  const [isPhoneDisplay] =  useMediaQuery(["(max-width: 480px)"]);
   return (    
     <Box>
-      <Header/>
+      <Header isPhoneDisplay={isPhoneDisplay}/>
       <Box id="home">
         <Particles type={ParticlesType.CONNECT} zIndex={-20} id="homeParticles"/>
         <HStack h="100vh" w="full" display="flex">
@@ -54,9 +55,18 @@ export default function Home() {
           </HStack>
 
           <VStack alignItems="center">
-            <TextFont {...fonts.T1.T48px.Bold} textShadow="1px 1px 10px gray" >{t("title")}</TextFont>
-            <TextFont {...fonts.T1.T20px.Regular} mt="-0.5rem" textShadow="1px 1px 4px gray">{t("subsubtitle")}</TextFont>
-            <TextFont {...fonts.T1.T14px.Regular} mt="-0.2rem" textShadow="1px 1px 4px gray">{t("subtitle")}</TextFont>
+            {isPhoneDisplay
+              ? <>
+                  <TextFont {...fonts.T1.T24px.Bold} textShadow="1px 1px 10px gray" >{t("title")}</TextFont>
+                  <TextFont {...fonts.T1.T14px.Regular} mt="-0.5rem" textShadow="1px 1px 4px gray">{t("subsubtitle")}</TextFont>
+                  <TextFont {...fonts.T1.T12px.Regular} mt="-0.2rem" textShadow="1px 1px 4px gray">{t("subtitle")}</TextFont>
+                </>
+              : <>
+                  <TextFont {...fonts.T1.T48px.Bold} textShadow="1px 1px 10px gray" >{t("title")}</TextFont>
+                  <TextFont {...fonts.T1.T20px.Regular} mt="-0.5rem" textShadow="1px 1px 4px gray">{t("subsubtitle")}</TextFont>
+                  <TextFont {...fonts.T1.T14px.Regular} mt="-0.2rem" textShadow="1px 1px 4px gray">{t("subtitle")}</TextFont>
+                </>
+            }
           </VStack>
 
           <HStack h="1rem" mb="3rem" w="full" justifyContent="center">
@@ -67,15 +77,15 @@ export default function Home() {
       </Box>
 
       <Box id="about"/>
-        <SectionAbout/>
+        <SectionAbout isPhoneDisplay={isPhoneDisplay}/>
       <Box id="skills"/>
-      <SectionSkills/>
+      <SectionSkills isPhoneDisplay={isPhoneDisplay}/>
       <Box id="projects"/>
-      <SectionProject setDisplayedProject={setDisplayedProject}/>
+      <SectionProject setDisplayedProject={setDisplayedProject} isPhoneDisplay={isPhoneDisplay}/>
       <Box id="studies"/>
-      <SectionStudies/>
+      <SectionStudies isPhoneDisplay={isPhoneDisplay}/>
       <Box id="contact"/>
-      <SectionContact/>
+      <SectionContact isPhoneDisplay={isPhoneDisplay}/>
 
       {displayedProject && <ProjectPopup {...displayedProject} setDisplayedProject={setDisplayedProject}/>}
 

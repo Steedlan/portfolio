@@ -11,11 +11,11 @@ export type ColorModeProviderProps = ThemeProviderProps
 
 export function ColorModeProvider(props: ColorModeProviderProps) {
   return (
-    <ThemeProvider attribute="class" disableTransitionOnChange {...props} />
+    <ThemeProvider attribute="class" disableTransitionOnChange {...props} defaultTheme="dark"/>
   )
 }
 
-export type ColorMode = "light" | "dark"
+export type ColorMode = "dark"
 
 export interface UseColorModeReturn {
   colorMode: ColorMode

@@ -25,11 +25,12 @@ function ParticleLayer({ type, zIndex = 0, id }: ParticlesProps) {
       // loaded={particlesLoaded}
       style={{
         inset: 0,
-        width: "100%",
-        height: "100%",
+        width: "100vw",
+        height: "100vh",
         zIndex,
         pointerEvents: "none",
         position: "absolute",
+        backgroundColor: "black !important",
       }}
     />
   );

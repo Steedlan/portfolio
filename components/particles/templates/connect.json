@@ -68,8 +68,8 @@
         "duration": 0.1,
         "easing": "ease-out-quad",
         "factor": 1,
-        "maxSpeed": 3,
-        "speed": 0.1
+        "maxSpeed": 1,
+        "speed": 0.05
       },
       "bounce": {
         "distance": 200

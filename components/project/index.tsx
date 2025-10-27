@@ -6,14 +6,16 @@ import ExternalLink from "../icons/externalLink";
 import GithubSolid from "../icons/github";
 import { useTranslation } from "react-i18next";
 
-export default function Project({description, imageUrl, technologies, title, githubUrl, websiteUrl, setDisplayedProject, popUp} : ProjectProps) {
+export default function Project({description, imageUrl, technologies, title, githubUrl, websiteUrl, setDisplayedProject, popUp, isPhoneDisplay} : ProjectProps) {
     const { t } = useTranslation();
     return (
-        <VStack w="30rem" h="auto" bg="#2b2b2b" borderRadius="1rem" p="1rem" m="1rem" alignItems="flex-start" boxShadow="lg">
+        <VStack w={isPhoneDisplay ? "auto" : "30rem"} h="auto" bg="#2b2b2b" borderRadius="1rem" p="1rem" m="1rem" alignItems="flex-start" boxShadow="lg">
             <HStack w="full" alignItems="center" justifyContent="center">
-                <TextFont {...fonts.T1.T24px.Bold}>{title}</TextFont>
+                <TextFont {...(isPhoneDisplay ? fonts.T1.T20px.Bold : fonts.T1.T24px.Bold)}>{title}</TextFont>
             </HStack>
-            <Image src={imageUrl} alt={title} objectFit="cover" borderRadius="1rem" />
+            <HStack w="full" justifyContent="center" alignItems="center" mb="0.5rem">
+                <Image src={imageUrl} alt={title} objectFit="cover" w={isPhoneDisplay ? "60%" : "full"} borderRadius="1rem" />
+            </HStack>
             <VStack w="full" h="full">
                 <TextFont {...fonts.T1.T16px.Regular} textAlign="center">
                     {description}

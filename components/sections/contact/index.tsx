@@ -5,7 +5,11 @@ import TextFont from "../../textFont";
 import fonts from "../../../utils/fonts";
 import Link from "next/link";
 
-export default function SectionContact() {
+export interface ContactSectionProps {
+  isPhoneDisplay: boolean;
+}
+
+export default function SectionContact({isPhoneDisplay}: ContactSectionProps) {
     const {t} = useTranslation();
     return(
         <HStack
@@ -22,10 +26,10 @@ export default function SectionContact() {
                 dropShadow={"dark-lg"}
                 shadow="inner"
               >
-                <SectionTitle title={t("navbar.contact")}/>
-                <TextFont {...fonts.T1.T20px.Regular}>{t("contact.title")}</TextFont>
+                <SectionTitle title={t("navbar.contact")} isPhoneDisplay={isPhoneDisplay}/>
+                <TextFont {...(isPhoneDisplay ? fonts.T1.T16px.Regular : fonts.T1.T20px.Regular)}>{t("contact.title")}</TextFont>
 
-                <TextFont {...fonts.T1.T14px.Regular}>{t("contact.description")}</TextFont>
+                <TextFont {...fonts.T1.T14px.Regular} ml="1rem" mr="1rem">{t("contact.description")}</TextFont>
                 <TextFont {...fonts.T1.T14px.Regular}>{t("contact.inbox")}</TextFont>
                 
                 <HStack w="auto" h="auto" p="1rem" bg="#3f3f3fff" borderRadius="1rem">

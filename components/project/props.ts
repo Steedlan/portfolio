@@ -10,4 +10,5 @@ export interface ProjectProps{
     technologies: ReactNode[];
     setDisplayedProject?: (project: ProjectPopupProps) => void;
     popUp?: ProjectPopupProps;
+    isPhoneDisplay: boolean;
 }
