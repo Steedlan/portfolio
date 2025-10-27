@@ -18,7 +18,7 @@ import ProjectPopupProps from "../components/projectPopup/props";
 export default function Home() {
   const { t } = useTranslation();
   const [displayedProject, setDisplayedProject] = useState<ProjectPopupProps | null>(null);
-  const [isPhoneDisplay] =  useMediaQuery(["(max-width: 480px)"]);
+  const [isPhoneDisplay] =  useMediaQuery(["(max-width: 1200px)"]);
   return (    
     <Box>
       <Header isPhoneDisplay={isPhoneDisplay}/>
