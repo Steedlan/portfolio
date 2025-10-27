@@ -12,20 +12,29 @@ const Header = ({ isPhoneDisplay }: HeaderProps) => {
   const { t, i18n } = useTranslation()
   const toggleLang = () => i18n.changeLanguage(i18n.language?.startsWith("en") ? "fr" : "en")
 
-
-  // tailles responsives
-  const navHeight = isPhoneDisplay ? "2rem" : "2.5rem"
-  const itemMargin = isPhoneDisplay ? "full" : "1rem"
+  const navHeight = isPhoneDisplay ? "2.2rem" : "2.5rem"
   const fontMobile = fonts.T1.T12px.Bold
   const fontDesktop = fonts.T1.T16px.Bold
 
   return (
     <>
-      {/* barres dégradées */}
-      <HStack w="full" h="5rem" position="fixed" zIndex="100" top="0"
-              bgImage="linear-gradient(180deg, rgba(0,0,0,1), rgba(255,255,255,0))" />
-      <HStack w="full" h="5rem" position="fixed" zIndex="10" bottom="0" opacity="0.5"
-              bgImage="linear-gradient(0deg, rgba(0,0,0,1), rgba(255,255,255,0))" />
+      <HStack
+        w="full"
+        h="5rem"
+        position="fixed"
+        zIndex="100"
+        top="0"
+        bgImage="linear-gradient(180deg, rgba(0,0,0,1), rgba(255,255,255,0))"
+      />
+      <HStack
+        w="full"
+        h="5rem"
+        position="fixed"
+        zIndex="10"
+        bottom="0"
+        opacity="0.5"
+        bgImage="linear-gradient(0deg, rgba(0,0,0,1), rgba(255,255,255,0))"
+      />
 
       <HStack>
         {/* NAV */}
@@ -37,15 +46,15 @@ const Header = ({ isPhoneDisplay }: HeaderProps) => {
           transform="translateX(-50%)"
           bg="linear-gradient(180deg, #2b2b2b, #252525)"
           boxShadow="xl"
-          h={navHeight}
-          px={isPhoneDisplay ? "0.25rem" : "0.5rem"}
+          h={isPhoneDisplay ? "2.2rem" : "2.5rem"}
           borderRadius="2rem"
           opacity="0.9"
-          whiteSpace="nowrap"
-          w={isPhoneDisplay ? "95vw" : "auto"}
+          w="auto"
           overflow="hidden"
-          justifyContent="center"
-          gap="0.5rem"
+          px={isPhoneDisplay ? "0" : "0.75rem"}
+          justifyContent={isPhoneDisplay ? "space-between" : "center"}
+          gap={isPhoneDisplay ? "0" : "1rem"}
+          whiteSpace="nowrap"
         >
           {[
             ["#home", t("navbar.home")],
@@ -56,9 +65,17 @@ const Header = ({ isPhoneDisplay }: HeaderProps) => {
             ["#contact", t("navbar.contact")],
           ].map(([href, label]) => (
             <Link key={href} href={`/${href}`} prefetch={false} scroll>
-              <HStack h="full">
+              <HStack
+                h="full"
+                flex={isPhoneDisplay ? "1" : "unset"}
+                justify="center"
+                alignItems="center"
+                transition=".3s"
+                _hover={{ bg: "rgba(255,255,255,0.08)" }}
+                mr={isPhoneDisplay ? "0.3rem" : "0.5rem"}
+                ml={isPhoneDisplay ? "0.3rem" : "0.5rem"}
+              >
                 <TextFont
-                  m={itemMargin}
                   {...(isPhoneDisplay ? fontMobile : fontDesktop)}
                   transition=".3s"
                   _hover={{ letterSpacing: "0.06rem" }}
@@ -82,16 +99,31 @@ const Header = ({ isPhoneDisplay }: HeaderProps) => {
             onClick={toggleLang}
             cursor="pointer"
             w="full"
-            justifyContent="end"
+            justifyContent="center"
           >
-            <TextFont {...fonts.T1.T14px.Regular} transition=".3s" _hover={{ letterSpacing: "0.06rem" }} mr="2rem">
+            <TextFont
+              {...fonts.T1.T16px.Regular}
+              transition=".3s"
+              _hover={{ letterSpacing: "0.06rem" }}
+              mt="0.5rem"
+            >
               {i18n.language?.startsWith("en") ? "FR" : "EN"}
             </TextFont>
           </HStack>
         ) : (
-          // ➡️ à droite sur desktop
-          <HStack position="fixed" top="2rem" zIndex="110" right="2rem" onClick={toggleLang} cursor="pointer">
-            <TextFont {...fonts.T1.T16px.Regular} transition=".3s" _hover={{ letterSpacing: "0.06rem" }}>
+          <HStack
+            position="fixed"
+            top="2rem"
+            zIndex="110"
+            right="2rem"
+            onClick={toggleLang}
+            cursor="pointer"
+          >
+            <TextFont
+              {...fonts.T1.T16px.Regular}
+              transition=".3s"
+              _hover={{ letterSpacing: "0.06rem" }}
+            >
               {i18n.language?.startsWith("en") ? "FR" : "EN"}
             </TextFont>
           </HStack>

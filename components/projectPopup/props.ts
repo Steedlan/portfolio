@@ -7,4 +7,5 @@ export default interface ProjectPopupProps {
     technologies: ReactNode[];
     youtubeUrl?: string;
     setDisplayedProject?: (project: ProjectPopupProps | null) => void;
+    isPhoneDisplay?: boolean;
 }

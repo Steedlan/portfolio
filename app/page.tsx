@@ -18,7 +18,7 @@ import ProjectPopupProps from "../components/projectPopup/props";
 export default function Home() {
   const { t } = useTranslation();
   const [displayedProject, setDisplayedProject] = useState<ProjectPopupProps | null>(null);
-  const [isPhoneDisplay] =  useMediaQuery(["(max-width: 1200px)"]);
+  const [isPhoneDisplay] =  useMediaQuery(["(max-width: 800px)"]);
   return (    
     <Box>
       <Header isPhoneDisplay={isPhoneDisplay}/>
@@ -87,7 +87,7 @@ export default function Home() {
       <Box id="contact"/>
       <SectionContact isPhoneDisplay={isPhoneDisplay}/>
 
-      {displayedProject && <ProjectPopup {...displayedProject} setDisplayedProject={setDisplayedProject}/>}
+      {displayedProject && <ProjectPopup {...displayedProject} setDisplayedProject={setDisplayedProject} isPhoneDisplay={isPhoneDisplay}/>}
 
     </Box>
   );
